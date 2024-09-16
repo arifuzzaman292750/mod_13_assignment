@@ -13,6 +13,4 @@ class Shirt {
     required this.imagePath,
   });
 
-  double get _price => price;
-
 }

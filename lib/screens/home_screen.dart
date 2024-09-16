@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
       price: 51.0,
       imagePath: 'lib/images/pullover.png',
     ),
+
     Shirt(
       name: 'T-Shirt',
       color: 'Gray',
@@ -26,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       price: 30.0,
       imagePath: 'lib/images/sport.png',
     ),
+
     Shirt(
       name: 'Sport Dress',
       color: 'Black',
@@ -114,11 +116,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
 
-  String getTotalAmount() {
-    double totalAmount = 0;
-    for(Shirt t in shirtItemList) {
-      totalAmount += t.price;
-    }
-    return totalAmount.toString();
+  int getTotalAmount() {
+    return shirtItemList.fold(
+        0, (sum, item) => sum + item.price.toInt());
   }
 }

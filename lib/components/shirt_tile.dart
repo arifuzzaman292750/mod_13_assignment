@@ -172,6 +172,8 @@ class _ShirtTileState extends State<ShirtTile> {
   }
 
   int quantityCount = 1;
+
+  int unitPrice = 0;
   
 
   void decrementQuantity() {
